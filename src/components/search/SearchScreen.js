@@ -34,7 +34,7 @@ export const SearchScreen = ({ history }) => {
             <hr />
 
             <div className="row">
-                <div className="col-5">
+                <div className="col-5" key="uniqueId0">
                     <h4> Search Form</h4>
                     <hr />
                     <form onSubmit={ handleSearch}>
@@ -62,17 +62,27 @@ export const SearchScreen = ({ history }) => {
 
                 </div>
 
-                <div className="col-7">
+                <div className="col-7" key="uniqueId1">
                     <h4>
                         Results
                     </h4>
                     <hr />
+                    {
+                    (q ==='') &&
+                       <div className="alert alert-info">
+                           Search a hero
+                       </div>         
+                    }
+                    { 
+                    
+                    (q!=='' && heroesFiltered.length === 0) && 
+                    
+                        <div className="alert alert-danger">
 
-                    { (q==='' && heroesFiltered.length === 0) && <div className="alert alert-danger">
+                            There is not a hero hero with { q }
 
-                        There is not a hero hero with { q }
-
-                    </div>}
+                        </div>
+                    }
 
                     { heroesFiltered.map ( hero => (
                         <HeroCard

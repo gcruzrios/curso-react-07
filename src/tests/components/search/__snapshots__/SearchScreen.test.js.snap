@@ -11,6 +11,7 @@ exports[`pruebas en SearchScreen debe de mostrar a Batman y el valor de query st
   >
     <div
       className="col-5"
+      key="uniqueId0"
     >
       <h4>
          Search Form
@@ -38,6 +39,7 @@ exports[`pruebas en SearchScreen debe de mostrar a Batman y el valor de query st
     </div>
     <div
       className="col-7"
+      key="uniqueId1"
     >
       <h4>
         Results
@@ -113,6 +115,62 @@ exports[`pruebas en SearchScreen debe de mostrar a Batman y el valor de query st
 </div>
 `;
 
+exports[`pruebas en SearchScreen debe de mostrar un error si no encuentra el Heroe 1`] = `
+<div>
+  <h1>
+    Search Screen
+  </h1>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+      key="uniqueId0"
+    >
+      <h4>
+         Search Form
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Find your hero"
+          type="text"
+          value="batman123"
+        />
+        <button
+          className="btn m-1 btn-block btn-outline-primary"
+          type="submit"
+        >
+          Search...
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+      key="uniqueId1"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="alert alert-danger"
+      >
+        There is not a hero hero with 
+        batman123
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`pruebas en SearchScreen debe de mostrarse correctamente con valores por defecto  1`] = `
 <div>
   <h1>
@@ -124,6 +182,7 @@ exports[`pruebas en SearchScreen debe de mostrarse correctamente con valores por
   >
     <div
       className="col-5"
+      key="uniqueId0"
     >
       <h4>
          Search Form
@@ -151,15 +210,16 @@ exports[`pruebas en SearchScreen debe de mostrarse correctamente con valores por
     </div>
     <div
       className="col-7"
+      key="uniqueId1"
     >
       <h4>
         Results
       </h4>
       <hr />
       <div
-        className="alert alert-danger"
+        className="alert alert-info"
       >
-        There is not a hero hero with 
+        Search a hero
       </div>
     </div>
   </div>

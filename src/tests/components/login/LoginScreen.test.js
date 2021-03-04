@@ -14,6 +14,9 @@ describe('Pruebas en LoginScreen', () => {
         }
     }
 
+    const history = {
+        replace: jest.fn()
+    }
 
     const wrapper = mount ( 
         <AuthContext.Provider value={ contextValue }>
@@ -31,9 +34,12 @@ describe('Pruebas en LoginScreen', () => {
 
     test('debe de realizar el dispatch y navegacion', () => {
         
-        //const handleClick = wrapper.find('button').prop('onClick');
-        //handleClick();
-        wrapper.find('button').prop('onClick')();
+        //wrapper.find('button').prop('onClick')();
+
+        const handleClick = wrapper.find('button').prop('onClick');
+        handleClick();
+        
+        
         expect (contextValue.dispatch).toHaveBeenCalledWith({
             type: types.login,
             payload:{

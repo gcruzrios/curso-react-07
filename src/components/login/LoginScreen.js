@@ -6,11 +6,8 @@ export const LoginScreen = ({ history }) => {
 
     const { dispatch } = useContext(AuthContext);
     const handleLogin =() => {
-       //history.goBack();
-       //history.push('/');
-       //
-
-       const lastPath = localStorage.getItem('lastPath') || '/'
+      
+        const lastPath = localStorage.getItem('lastPath') || '/'
         
         dispatch({
             type: types.login,

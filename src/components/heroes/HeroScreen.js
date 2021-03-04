@@ -34,7 +34,7 @@ export const HeroScreen = ( {history} ) => {
         characters,  
     } = hero;
 
-    console.log(publisher)
+    //console.log(publisher)
    
     
 
